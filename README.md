@@ -47,3 +47,15 @@ export default {
 
 `static` can be a function or an object (like `data`).
 
+
+## Custom Merge Strategy
+
+Internally, this plugin uses Vue's [$options](https://vuejs.org/v2/api/#vm-options) (specifically `$options.static`). Therefore you can use [custom merge strategies](https://vuejs.org/v2/guide/mixins.html#Custom-Option-Merge-Strategies).
+
+```
+Vue.config.optionMergeStrategies.static = function(from_val, to_val) {
+    // use another strategy
+    //
+    // return merged_val
+};
+```
