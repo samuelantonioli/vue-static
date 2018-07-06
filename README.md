@@ -54,8 +54,7 @@ Internally, this plugin uses Vue's [$options](https://vuejs.org/v2/api/#vm-optio
 
 ## Namespace
 
-There's an option so that all static data will be namespaced into `$static` component property.
-This is solely to avoid conflicts with other options and reactive data (same name, for instance), and helps you to remember which data is or isn't reactive.
+There's an option called `namespaced` so that all static data will be namespaced into `$static` component property. This is solely to avoid conflicts with other options and reactive data (same name, for instance), and helps you to remember which data is or isn't reactive.
 
 ```javascript
 import VueStatic from 'vue-static'
