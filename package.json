@@ -1,0 +1,26 @@
+{
+    "name": "vue-static",
+    "version": "0.0.1",
+    "description": "Vue.js plugin that allows you to disable reactivity for variables in Vue components",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samuelantonioli/vue-static.git"
+    },
+    "keywords": [
+        "vue",
+        "static",
+        "reactivity",
+        "non-reactive",
+        "variables"
+    ],
+    "author": "Samuel Antonioli <contact@samuelantonioli.de>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/samuelantonioli/vue-static/issues"
+    },
+    "homepage": "https://github.com/samuelantonioli/vue-static",
+    "devDependencies": {
+        "vue": "*"
+    }
+}
