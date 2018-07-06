@@ -1,5 +1,8 @@
 
 function install(Vue) {
+    if (typeof(Vue.config.optionMergeStrategies.static) !== 'function') {
+        Vue.config.optionMergeStrategies.static = Vue.config.optionMergeStrategies.data;
+    }
     Vue.mixin({
         beforeCreate: function () {
             const static = this.$options.static;
