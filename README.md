@@ -50,4 +50,18 @@ export default {
 
 ## Custom Merge Strategy
 
-Internally, this plugin uses Vue's [$options](https://vuejs.org/v2/api/#vm-options) (specifically `$options.static`). Therefore you can use [custom merge strategies](https://vuejs.org/v2/guide/mixins.html#Custom-Option-Merge-Strategies). By default it uses the same strategy for merges as `data` (`Vue.config.optionMergeStrategies.data`)
+Internally, this plugin uses Vue's [$options](https://vuejs.org/v2/api/#vm-options) (specifically `$options.static`). Therefore you can use [custom merge strategies](https://vuejs.org/v2/guide/mixins.html#Custom-Option-Merge-Strategies). By default it uses the same strategy for merges as `data` (`Vue.config.optionMergeStrategies.data`). Thanks to [Akryum](https://github.com/Akryum) for the idea.
+
+## Namespace
+
+There's an option so that all static data will be namespaced into `$static` component property.
+This is solely to avoid conflicts with other options and reactive data (same name, for instance), and helps you to remember which data is or isn't reactive.
+
+```javascript
+import VueStatic from 'vue-static'
+Vue.use(VueStatic, {
+    namespaced: true,
+});
+```
+
+Just use `this.$static.variable` instead of `this.variable` in your code and `$static.variable` instead of `variable` in your template. Thanks to [matheusgrieger](https://github.com/matheusgrieger) for the idea. See [here](https://github.com/samuelantonioli/vue-static/pull/2) for example usage.
