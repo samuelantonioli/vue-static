@@ -10,12 +10,12 @@ function install(Vue, options) {
     }
     Vue.mixin({
         beforeCreate: function () {
-            const static = this.$options.static;
-            const destination = this.$static || this;
-            if (static && typeof(static) === 'function') {
-                Object.assign(destination, static.apply(this));
-            } else if (static && typeof(static) === 'object') {
-                Object.assign(destination, static);
+            const vue_static = this.$options.static;
+            const vue_static_destination = this.$static || this;
+            if (vue_static && typeof(vue_static) === 'function') {
+                Object.assign(vue_static_destination, vue_static.apply(this));
+            } else if (vue_static && typeof(vue_static) === 'object') {
+                Object.assign(vue_static_destination, vue_static);
             }
         },
     });
