@@ -64,3 +64,15 @@ Vue.use(VueStatic, {
 ```
 
 Just use `this.$static.variable` instead of `this.variable` in your code and `$static.variable` instead of `variable` in your template. Thanks to [matheusgrieger](https://github.com/matheusgrieger) for the idea. See [here](https://github.com/samuelantonioli/vue-static/pull/2) for example usage.
+
+## Name
+
+There's an option called `name` so that the `static` function/object can be renamed. This addresses the issue that `static` is a reserved keyword. If you have problems to use `static` as the default name, you can change it.
+
+```javascript
+import VueStatic from 'vue-static'
+Vue.use(VueStatic, {
+    name: 'basedata',
+});
+```
+
